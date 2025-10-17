@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baram Studio - Aromatherapy & Workshops</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Testing</h1>
-    <h2>testing more and more</h2>
+  <header>
+    <div class="logo">Baram Studio</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#calendar">Workshops</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <section class="hero">
+    <h1>Find Calm Through Creation</h1>
+    <p>Natural aromatherapy workshops and handmade skincare — crafted with care and peace.</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Baram Studio</h2>
+    <p>At Baram Studio, we create moments of calm through hands-on aromatherapy workshops and natural wellness products. Each creation is inspired by mindfulness and nature.</p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Workshop Gallery</h2>
+    <div class="gallery-scroll" id="gallery-scroll">
+      <div class="gallery-item"><img src="https://placehold.co/300x200?text=Workshop+1" alt="Workshop 1"></div>
+      <div class="gallery-item"><img src="https://placehold.co/300x200?text=Workshop+2" alt="Workshop 2"></div>
+      <div class="gallery-item"><img src="https://placehold.co/300x200?text=Workshop+3" alt="Workshop 3"></div>
+      <div class="gallery-item"><img src="https://placehold.co/300x200?text=Workshop+4" alt="Workshop 4"></div>
+    </div>
+  </section>
+
+  <section id="calendar" class="calendar-section">
+<h2>Workshop Calendar</h2>
+<div class="calendar-nav">
+<button onclick="prevMonth()">&lt; </button>
+&nbsp; <span id="month-year"></span> &nbsp;
+<button onclick="nextMonth()"> &gt;</button>
+</div>
+<div class="calendar-container">
+<div class="calendar">
+<div class="calendar-header" style="display: grid; grid-template-columns: repeat(7, 1fr);">
+<div>Sun</div>
+<div>Mon</div>
+<div>Tue</div>
+<div>Wed</div>
+<div>Thu</div>
+<div>Fri</div>
+<div>Sat</div>
+</div>
+<div id="calendar-days" class="calendar-days" style="display: grid; grid-template-columns: repeat(7, 1fr);"></div>
+</div>
+<div id="workshop-details" class="workshop-details"></div>
+</div>
+</section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xgvnddea" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Baram Studio. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
